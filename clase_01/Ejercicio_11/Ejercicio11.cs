@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Clases_labo;
+using Entidades;
 
 
 namespace Ejercicio_11
 {
-    class Program
+    class Ejercicio11
     {
         static void Main(string[] args)
         {

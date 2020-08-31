@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Clases_labo;
+using Entidades;
 
 namespace Clase_2
 {
@@ -12,6 +12,7 @@ namespace Clase_2
     {
         static void Main()
         {
+            
 
             int numero;
             string ingreso;

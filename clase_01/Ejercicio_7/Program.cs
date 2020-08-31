@@ -11,19 +11,56 @@ namespace Ejercicio_7
         static void Main(string[] args)
         {
             //EJERCICIO 7
-
-            //DateTime fechaActual = DateTime.Now.Hour;
-            //string fecha = fechaActual.ToString();
-            int horas = DateTime.Now.Hour;
-            //fechaActual.ToString();
-            int minutos = DateTime.Now.Minute;
-            int day = DateTime.Now.Day;
+            Console.Title = "Ejercicio numero 7";
+            
+            int dia = DateTime.Now.Day;
             int mes = DateTime.Now.Month;
             int anio = DateTime.Now.Year;
 
-            //Console.WriteLine("actual: {0}",fechaActual);
-            Console.WriteLine("actual horas: {0}", horas);
-            Console.WriteLine("actual minutos: {0}", minutos);
+           
+            int anioNac;
+            int mesNac;
+            int diaNac;
+            int acumuladorDias = 0;
+
+            Console.WriteLine("Ingrese el año de nacimiento, primero el dia, luego el mes y por ultimo el año");
+
+            while ((!(int.TryParse(Console.ReadLine(), out diaNac) &&
+                    int.TryParse(Console.ReadLine(), out mesNac) &&
+                    int.TryParse(Console.ReadLine(), out anioNac)))||
+                    anioNac > anio || mesNac > 12 || (mesNac > mes && anio == anioNac) || diaNac > DateTime.DaysInMonth(anioNac,mesNac))
+            {
+                Console.WriteLine("Error deben ser numeros, reintente");
+                Console.WriteLine("Ingrese el año de nacimiento, primero el dia, luego el mes y por ultimo el año");
+            }
+
+            for(int i=anioNac;i<=anio;i++)
+            {
+                for(int j=1;j<=12 && anioNac < anio;j++)
+                {
+                    if(i==anioNac && j<mesNac)
+                    {
+                        continue;
+                    }
+                    acumuladorDias += DateTime.DaysInMonth(i,j);
+                }
+                acumuladorDias -= diaNac;
+                for(int z=1;z<mes && anio == i;z++)
+                {
+                    if(anio == anioNac && z < mesNac)
+                    {
+                        continue;
+                    }
+                    acumuladorDias += DateTime.DaysInMonth(anio, z);
+               
+                }
+                acumuladorDias += dia;
+
+            }
+            
+            Console.WriteLine("La cantidad de dias vividos hasta la fecha: {0}/{1} son: {2}", mes, anio, acumuladorDias);
+            
+
            
 
             Console.ReadKey();
