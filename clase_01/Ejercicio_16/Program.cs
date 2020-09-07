@@ -11,21 +11,11 @@ namespace Ejercicio_16
     {
         static void Main(string[] args)
         {
-            Alumno alumno1 = new Alumno();
-            Alumno alumno2 = new Alumno();
-            Alumno alumno3 = new Alumno();
+            Alumno alumno1 = new Alumno("Nicolas","lopez",01);
+            Alumno alumno2 = new Alumno("Matias","Gil",02);
+            Alumno alumno3 = new Alumno("Alejandro","Lencina",03);
 
-            alumno1.nombre = "Nicolas";
-            alumno1.apellido = "Perez";
-            alumno1.legajo = 1;
-
-            alumno2.nombre = "Jose";
-            alumno2.apellido = "Nogeira";
-            alumno2.legajo = 2;
-
-            alumno3.nombre = "Juan";
-            alumno3.apellido = "Lalin";
-            alumno3.legajo = 3;
+            
 
             alumno1.Estudiar(9, 9);
             alumno2.Estudiar(3, 4);

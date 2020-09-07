@@ -8,16 +8,26 @@ namespace Entidades
 {
     public class Alumno
     {
-        byte nota1;
-        byte nota2;
-        float notaFinal;
-        public string apellido;
-        public int legajo;
-        public string nombre;
+        private byte nota1;
+        private  byte nota2;
+        private float notaFinal;
+        private string apellido;
+        private int legajo;
+        private string nombre;
 
+        private static Random aleatorio = new Random();
+
+
+        public Alumno(string nombre, string apellido, int legajo)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.legajo = legajo;
+        }
         void CalcularFinal()
         {
-            notaFinal = (nota1 + nota2) / 2;
+            notaFinal = aleatorio.Next(1,10);
+           // notaFinal = (nota1 + nota2) / 2;
         }
         public void Estudiar(byte nota11, byte nota22)
         {
