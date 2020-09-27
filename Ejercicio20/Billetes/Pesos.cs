@@ -9,15 +9,15 @@ namespace Billetes
     public class Pesos
     {
         private double cantidad;
-        private double cotizRespectoDolar;
+        private static double cotizRespectoDolar;
 
         public double GetCantidad()
         {
-
+            return this.cantidad;
         }
-        public double GetCotizacion()
+        public static double GetCotizacion()
         {
-
+            return Pesos.cotizRespectoDolar;
         }
         private Pesos()
         {
