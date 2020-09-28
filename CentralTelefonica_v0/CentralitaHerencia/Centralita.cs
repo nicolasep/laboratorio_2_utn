@@ -8,45 +8,9 @@ namespace CentralitaHerencia
 {
     public class Centralita
     {
-        /*j. Se reemplaza el método Mostrar por la sobrescritura del método ToString.
-            k. AgregarLlamada es privado. Recibe una Llamada y la agrega a la lista de llamadas.
-            l. El operador == retornará true si la Centralita contiene la Llamada en su lista genérica. Utilizar
-            sobrecarga == de Llamada.
-            m. El operador + invocará al método AgregarLlamada sólo si la llamada no está registrada en la
-            Centralita (utilizar la sobrecarga del operador == de Centralita).*/
-
         List<Llamada> listaDeLlamadas;
         protected string razonSocial;
 
-        private void AgregarLlamada(Llamada nuevaLlamada)
-        {
-            listaDeLlamadas.Add(nuevaLlamada);
-        }
-        public static bool operator ==(Centralita c, Llamada llamada)
-        {
-            foreach(Llamada l in c.listaDeLlamadas)
-            {
-                if(l == llamada)
-                {
-                    return true;
-                   
-                }
-            }
-            return false;
-        }
-        public static bool operator !=(Centralita c, Llamada llamada)
-        {
-            return !(c == llamada);
-        }
-        public static Centralita operator +(Centralita c, Llamada nuevaLlamada)
-        {
-            if(c != nuevaLlamada)
-            {
-                c.listaDeLlamadas.Add(nuevaLlamada);
-                
-            }
-            return c;
-        }
         public float GananciasPorLocal
         {
             get
