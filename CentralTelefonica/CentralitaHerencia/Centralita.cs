@@ -29,7 +29,6 @@ namespace CentralitaHerencia
                 if(l == llamada)
                 {
                     return true;
-                   
                 }
             }
             return false;
