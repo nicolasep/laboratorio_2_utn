@@ -20,7 +20,7 @@ namespace Examen_1_labo2_Mascotas
 
             Perro perro1 = new Perro("p1", "rope1");
             Perro perro2 = new Perro("p2", "rope2");
-            Perro perro3 = new Perro("p3", "rope3",10,true);
+            Perro perro3 = new Perro("p3", "rope3", 10, true);
             Perro perro4 = new Perro("p4", "rope4");
 
             grupo += gato1;
@@ -31,11 +31,12 @@ namespace Examen_1_labo2_Mascotas
             grupo += gato3;
             grupo += gato4;
             grupo += perro4;
-            
+
             grupo += gato2;
             grupo += perro3;
 
-            Console.WriteLine(grupo);
+            Console.WriteLine(grupo); 
+            
             Console.ReadKey();
         }
     }

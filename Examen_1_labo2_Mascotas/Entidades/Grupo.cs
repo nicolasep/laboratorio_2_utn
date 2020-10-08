@@ -86,6 +86,7 @@ namespace Entidades
             sb.AppendLine("Integrantes:");
             foreach (Mascota l in e.manada)
             {
+
                 if (l is Perro)
                 {
                     sb.AppendLine(((Perro)l).ToString());
