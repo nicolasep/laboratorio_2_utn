@@ -16,7 +16,7 @@ namespace NicolasEduardo.Perez._2c
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ControlPublicoForm());
+            Application.Run(new FormBar());
         }
     }
 }

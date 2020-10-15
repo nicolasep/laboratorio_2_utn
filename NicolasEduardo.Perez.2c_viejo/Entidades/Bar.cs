@@ -12,18 +12,13 @@ namespace Entidades
         private List<Gente> gente;
         private static Bar singleton;
 
-        /// <summary>
-        /// Constructor privado que inicializa las listas
-        /// </summary>
         private Bar()
         {
             empleados = new List<Empleado>();
             gente = new List<Gente>();
 
         }
-        /// <summary>
-        /// Propiedad que devuelve la lista de empleados
-        /// </summary>
+
         public List<Empleado> Empleados
         {
             get
@@ -31,9 +26,6 @@ namespace Entidades
                 return this.empleados;
             }
         }
-        /// <summary>
-        /// Propiedad que devuelve la lista de gente
-        /// </summary>
         public List<Gente> Gente
         {
             get
@@ -78,7 +70,7 @@ namespace Entidades
         /// <summary>
         /// agrega gente al bar siempre que halla empleados para atender
         /// </summary>
-        /// <param name="bar">instancia del bar</param>
+        /// <param name="bar">lista del bar</param>
         /// <param name="gente">gente a agregar</param>
         /// <returns>devuelve true si pudo agregar, de lo contratrio false</returns>
         public static bool operator +(Bar bar, Gente gente)
@@ -94,45 +86,16 @@ namespace Entidades
             }
             return false;
         }
-        /// <summary>
-        /// Elemina el tipo de persona pasado por parametro (si es empleado, elimina el ultimo empleado y si es gente, elimina la primera en la lista)
-        /// </summary>
-        /// <param name="bar">instancia del bar</param>
-        /// <param name="persona">tipo de persona a eliminar "gente" o "empleado"</param>
-        /// <returns>devuelve true si pudo eliminar, false si no pudo</returns>
-        public static bool operator -(Bar bar, string persona)
-        {
-            bool retorno = false;
-            if (persona == "empleado")
-            {
-                if (bar.Empleados.Count > ((bar.Gente.Count) / 10))
-                {
-                    bar.Empleados.RemoveAt(bar.Empleados.Count - 1);
-                    retorno = true;
-                }
-            }
-            else if (persona == "gente")
-            {
-                bar.Gente.RemoveAt(0);
-                retorno = true;
-            }
-            
-            return retorno;
-        }
-        /// <summary>
-        /// Sobrecarga que retorna la lista de empleados y gente en el bar
-        /// </summary>
-        /// <returns>devuelve un string con los empleados y la gente</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             foreach (Empleado l in this.Empleados)
             {
-                sb.AppendLine((string)l);
+                sb.AppendLine((string)((Persona)l));
             }
             foreach (Gente g in this.Gente)
             {
-                sb.AppendLine(((string)g));
+                sb.AppendLine((string)((Persona)g));
             }
             
             return sb.ToString();

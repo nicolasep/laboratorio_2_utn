@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControlPublicoForm.cs">
+    <Compile Include="FormBar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ControlPublicoForm.Designer.cs">
-      <DependentUpon>ControlPublicoForm.cs</DependentUpon>
+    <Compile Include="FormBar.Designer.cs">
+      <DependentUpon>FormBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatosForm.cs">
+    <Compile Include="FormIngresoEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatosForm.Designer.cs">
-      <DependentUpon>DatosForm.cs</DependentUpon>
+    <Compile Include="FormIngresoEmpleados.Designer.cs">
+      <DependentUpon>FormIngresoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngresoGente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngresoGente.Designer.cs">
+      <DependentUpon>FormIngresoGente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInformes.cs">
       <SubType>Form</SubType>
@@ -66,11 +72,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ControlPublicoForm.resx">
-      <DependentUpon>ControlPublicoForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormBar.resx">
+      <DependentUpon>FormBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatosForm.resx">
-      <DependentUpon>DatosForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormIngresoEmpleados.resx">
+      <DependentUpon>FormIngresoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngresoGente.resx">
+      <DependentUpon>FormIngresoGente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInformes.resx">
       <DependentUpon>FormInformes.cs</DependentUpon>

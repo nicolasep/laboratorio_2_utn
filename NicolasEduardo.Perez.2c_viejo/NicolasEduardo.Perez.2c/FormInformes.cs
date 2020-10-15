@@ -12,14 +12,9 @@ namespace NicolasEduardo.Perez._2c
 {
     public partial class FormInformes : Form
     {
-        
-        public FormInformes(string lista)
+        public FormInformes()
         {
             InitializeComponent();
-            this.textInformes.Text = lista;
-           
         }
-
-       
     }
 }

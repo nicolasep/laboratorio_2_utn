@@ -8,25 +8,39 @@ namespace Entidades
 {
     public class Gente : Persona
     {
-        public Gente(short edad):base(null,edad)
+       /// <summary>
+       /// Contructor de instancia de Gente
+       /// </summary>
+       /// <param name="edad">edad de la persona</param>
+        public Gente(short edad):base(null,edad) 
         {
 
         }
+        /// <summary>
+        /// Imprime los datos de un objeto Gente
+        /// </summary>
+        /// <returns>devuelve un string con sus datos</returns>
         protected override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("GENTE ");
-            sb.AppendLine(string.Format("Edad: {0}",base.Edad));
+            sb.Append($"Edad: {this.Edad}");
 
             return sb.ToString();
         }
+
+        /// <summary>
+        /// Valida que la persona sea mayor a 18 años
+        /// </summary>
+        /// <returns>devuelve true si es mayor, false si es menor</returns>
         public override bool Validar()
         {
-            if (this.Edad > 18)
+            if (this.Edad >= 18)
             {
                 return true;
             }
             return false;
         }
+        
     }
 }

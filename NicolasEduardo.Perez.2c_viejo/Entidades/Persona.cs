@@ -24,7 +24,7 @@ namespace Entidades
             }
             set
             {
-                this.edad = value; 
+                this.edad = value;
             }
         }
         public string Nombre
@@ -38,9 +38,18 @@ namespace Entidades
                 this.nombre = value;
             }
         }
-        
-        protected abstract string Mostrar();  
-            
+        /// <summary>
+        /// imprime los datos de la persona
+        /// </summary>
+        /// <returns>devuelve un string con los datos</returns>
+        protected virtual string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(string.Format("Nombre: {0} Edad: {1}", this.Nombre, this.Edad));
+
+            return sb.ToString();
+
+        }
         
         public abstract bool Validar();
 
@@ -52,6 +61,5 @@ namespace Entidades
         {
             return persona.Mostrar();
         }
-
     }
 }
