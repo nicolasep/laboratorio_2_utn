@@ -12,11 +12,12 @@ namespace NicolasEduardo.Perez._2c
 {
     public partial class FormInformes : Form
     {
-        
+
         public FormInformes(string lista)
         {
             InitializeComponent();
-            this.textInformes.Text = lista;
+            //this.textInformes.Text = lista;
+            this.richTextBoxInformes.Text = lista;
            
         }
 

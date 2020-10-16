@@ -94,6 +94,11 @@ namespace NicolasEduardo.Perez._2c
             }
             return true;
         }
+        /// <summary>
+        /// Valida que la cadena pasada por parametro sea valida como nombre
+        /// </summary>
+        /// <param name="nombre">nombre</param>
+        /// <returns>devuelve false si contiene algo que no sean letras y si esta bien devuelve true</returns>
         private static bool ValidarNombre(string nombre)
         {
             if (!string.IsNullOrWhiteSpace(nombre))
@@ -112,6 +117,11 @@ namespace NicolasEduardo.Perez._2c
             }
             return true;
         }
+        /// <summary>
+        /// Valida que la cadena pasada por parametro sea un dni valido
+        /// </summary>
+        /// <param name="dni">dni a analizar</param>
+        /// <returns>devuelve true si tienne solo numeros y la cantidad es 8, false si no lo cumple</returns>
         private static bool ValidarDni(string dni)
         {
             if (!string.IsNullOrWhiteSpace(dni) && dni.Length != 8)

@@ -23,9 +23,8 @@ namespace Entidades
         protected override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("GENTE ");
-            sb.Append($"Edad: {this.Edad}");
-
+            sb.Append($"GENTE {base.Mostrar()}");
+           
             return sb.ToString();
         }
 

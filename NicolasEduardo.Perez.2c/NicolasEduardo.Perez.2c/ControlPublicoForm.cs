@@ -23,8 +23,10 @@ namespace NicolasEduardo.Perez._2c
         {
             InitializeComponent();
 
-            this.valorNumericEmpleados = 0;
-            this.valorNumericGente = 0;
+            //this.valorNumericEmpleados = 0;
+            //this.valorNumericGente = 0;
+            this.valorNumericEmpleados = this.bar.Empleados.Count;
+            this.valorNumericGente = this.bar.Gente.Count;
             EmpleadosDefault();
             ClientesDefault();
         }
@@ -189,6 +191,14 @@ namespace NicolasEduardo.Perez._2c
                     this.nudEmpleados.Value = this.valorNumericEmpleados;
                 }
             }
+            aleatorio = (short)random.Next(21, 50);
+            Empleado aux2 = new Empleado("Javier", aleatorio,32555777);
+            if(bar + aux2)
+            {
+                this.valorNumericEmpleados++;
+                this.nudEmpleados.Value = this.valorNumericEmpleados;
+            }
+
 
         }
         private void btnInforme_Click(object sender, EventArgs e)

@@ -29,20 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textInformes = new System.Windows.Forms.TextBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.richTextBoxInformes = new System.Windows.Forms.RichTextBox();
             this.datosFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datosFormBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosFormBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosFormBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textInformes
+            // numericUpDown1
             // 
-            this.textInformes.Location = new System.Drawing.Point(16, 23);
-            this.textInformes.Multiline = true;
-            this.textInformes.Name = "textInformes";
-            this.textInformes.Size = new System.Drawing.Size(614, 363);
-            this.textInformes.TabIndex = 0;
+            this.numericUpDown1.Location = new System.Drawing.Point(144, 10);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(8, 22);
+            this.numericUpDown1.TabIndex = 1;
+            // 
+            // richTextBoxInformes
+            // 
+            this.richTextBoxInformes.Location = new System.Drawing.Point(12, 12);
+            this.richTextBoxInformes.Name = "richTextBoxInformes";
+            this.richTextBoxInformes.Size = new System.Drawing.Size(431, 427);
+            this.richTextBoxInformes.TabIndex = 2;
+            this.richTextBoxInformes.Text = "";
             // 
             // datosFormBindingSource
             // 
@@ -56,22 +65,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 398);
-            this.Controls.Add(this.textInformes);
+            this.ClientSize = new System.Drawing.Size(455, 451);
+            this.Controls.Add(this.richTextBoxInformes);
+            this.Controls.Add(this.numericUpDown1);
             this.Name = "FormInformes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormInformes";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosFormBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosFormBindingSource1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textInformes;
         private System.Windows.Forms.BindingSource datosFormBindingSource;
         private System.Windows.Forms.BindingSource datosFormBindingSource1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.RichTextBox richTextBoxInformes;
     }
 }

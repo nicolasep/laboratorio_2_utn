@@ -11,6 +11,7 @@ namespace Entidades
         private short edad;
         private string nombre;
 
+
         protected Persona(string nombre, short edad)
         {
             this.Edad = edad;
@@ -38,9 +39,18 @@ namespace Entidades
                 this.nombre = value;
             }
         }
-        
-        protected abstract string Mostrar();  
-            
+        /// <summary>
+        /// imprime los datos de una persona
+        /// </summary>
+        /// <returns>devuelve un string con los datos de la persona</returns>
+        protected virtual string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"Nombre: {this.Nombre} Edad: {this.Edad}");
+
+
+            return sb.ToString();
+        }
         
         public abstract bool Validar();
 
@@ -50,7 +60,7 @@ namespace Entidades
         /// <param name="persona">devuelve un string con los datos de una persona</param>
         public static explicit operator string(Persona persona)
         {
-            return persona.Mostrar();
+            return persona.Mostrar();//asi esta bien
         }
 
     }
