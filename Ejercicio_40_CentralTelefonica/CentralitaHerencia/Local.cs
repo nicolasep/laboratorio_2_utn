@@ -36,12 +36,12 @@ namespace CentralitaHerencia
             return this.costo * this.Duracion;
         }
         public Local(Llamada llamada, float costo):this(llamada.NroOrigen,llamada.Duracion,llamada.NroDestino,costo)
-            //:base(llamada.Duracion,llamada.NroDestino,llamada.NroOrigen)
+            
         {
             
         }
         public Local(string origen, float duracion, string destino, float costo):base(duracion,destino,origen)
-            //:this(new Llamada(duracion,destino,origen),costo)
+            
         {
             this.costo = costo;
 
@@ -49,8 +49,8 @@ namespace CentralitaHerencia
         protected override string Mostrar()
         {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.AppendLine(base.Mostrar());
-            stringBuilder.AppendLine($"El costo de la llamada es: {this.CostoLlamada}");
+            stringBuilder.Append(base.Mostrar());
+            stringBuilder.Append($"El costo de la llamada es: {this.CostoLlamada}");
            
 
             return stringBuilder.ToString();

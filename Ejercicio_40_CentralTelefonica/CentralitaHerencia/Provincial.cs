@@ -37,7 +37,7 @@ namespace CentralitaHerencia
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.AppendLine($"Numero de origen: {this.NroOrigen} Numero Destino: {this.nroDestino} Duracion: {this.Duracion}");
-            stringBuilder.AppendLine($"La franja horaria es: {franjaHoraria} El costo de la llamada es: {this.CostoLlamada}");
+            stringBuilder.Append($"La franja horaria es: {franjaHoraria} El costo de la llamada es: {this.CostoLlamada}");
             return stringBuilder.ToString();
         }
         private float CalcularCosto()

@@ -28,94 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnLlamada = new System.Windows.Forms.Button();
+            this.btnFacturacionTotal = new System.Windows.Forms.Button();
+            this.btnFacturacionLocal = new System.Windows.Forms.Button();
+            this.btnFacturacionProvincial = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnLlamada
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(41, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(349, 85);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Generar Llamada";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLlamada.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLlamada.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btnLlamada.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLlamada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnLlamada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnLlamada.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLlamada.ForeColor = System.Drawing.Color.Black;
+            this.btnLlamada.Location = new System.Drawing.Point(41, 12);
+            this.btnLlamada.Name = "btnLlamada";
+            this.btnLlamada.Size = new System.Drawing.Size(349, 85);
+            this.btnLlamada.TabIndex = 0;
+            this.btnLlamada.Text = "Generar Llamada";
+            this.btnLlamada.UseVisualStyleBackColor = false;
+            this.btnLlamada.Click += new System.EventHandler(this.btnLlamada_Click);
             // 
-            // button2
+            // btnFacturacionTotal
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(41, 119);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(349, 85);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Facturacion Total";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnFacturacionTotal.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFacturacionTotal.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturacionTotal.ForeColor = System.Drawing.Color.Black;
+            this.btnFacturacionTotal.Location = new System.Drawing.Point(41, 119);
+            this.btnFacturacionTotal.Name = "btnFacturacionTotal";
+            this.btnFacturacionTotal.Size = new System.Drawing.Size(349, 85);
+            this.btnFacturacionTotal.TabIndex = 1;
+            this.btnFacturacionTotal.Text = "Facturacion Total";
+            this.btnFacturacionTotal.UseVisualStyleBackColor = false;
+            this.btnFacturacionTotal.Click += new System.EventHandler(this.btnFacturacionTotal_Click);
             // 
-            // button3
+            // btnFacturacionLocal
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(41, 219);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(349, 85);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Facturacion Local";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnFacturacionLocal.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFacturacionLocal.ForeColor = System.Drawing.Color.Black;
+            this.btnFacturacionLocal.Location = new System.Drawing.Point(41, 219);
+            this.btnFacturacionLocal.Name = "btnFacturacionLocal";
+            this.btnFacturacionLocal.Size = new System.Drawing.Size(349, 85);
+            this.btnFacturacionLocal.TabIndex = 2;
+            this.btnFacturacionLocal.Text = "Facturacion Local";
+            this.btnFacturacionLocal.UseVisualStyleBackColor = false;
+            this.btnFacturacionLocal.Click += new System.EventHandler(this.btnFacturacionLocal_Click);
             // 
-            // button4
+            // btnFacturacionProvincial
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(41, 319);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(349, 85);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Facturacion Provincial";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnFacturacionProvincial.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFacturacionProvincial.Location = new System.Drawing.Point(41, 319);
+            this.btnFacturacionProvincial.Name = "btnFacturacionProvincial";
+            this.btnFacturacionProvincial.Size = new System.Drawing.Size(349, 85);
+            this.btnFacturacionProvincial.TabIndex = 3;
+            this.btnFacturacionProvincial.Text = "Facturacion Provincial";
+            this.btnFacturacionProvincial.UseVisualStyleBackColor = false;
+            this.btnFacturacionProvincial.Click += new System.EventHandler(this.btnFacturacionProvincial_Click);
             // 
-            // button5
+            // btnSalir
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(41, 426);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(349, 85);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Salir";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSalir.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalir.Location = new System.Drawing.Point(41, 426);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(349, 85);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // Form1
+            // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 533);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnFacturacionProvincial);
+            this.Controls.Add(this.btnFacturacionLocal);
+            this.Controls.Add(this.btnFacturacionTotal);
+            this.Controls.Add(this.btnLlamada);
+            this.Name = "FormMenu";
             this.Text = "Central Telefonica";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnFacturacionTotal;
+        private System.Windows.Forms.Button btnFacturacionProvincial;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnLlamada;
+        private System.Windows.Forms.Button btnFacturacionLocal;
     }
 }
 

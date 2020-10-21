@@ -22,18 +22,18 @@ namespace CentralTelefonica
             // La centralita mostrará por pantalla todas las llamadas según las vaya registrando.
             c = c + l1;
             
-            //Console.WriteLine(c.Mostrar());
+            Console.WriteLine(c.Mostrar());
             c= c + l2;
             //c.Llamadas.Add(l2);
-            //Console.WriteLine(c.Mostrar());
+            Console.WriteLine(c.Mostrar());
             c= c + l3;
             //c.Llamadas.Add(l3);
-            //Console.WriteLine(c.Mostrar());
+            Console.WriteLine(c.Mostrar());
             c= c + l4;
             //c.Llamadas.Add(l4);
-            //Console.WriteLine(c.Mostrar());
+            Console.WriteLine(c.Mostrar());
            
-            c.OrdenarLlamadas();
+            //c.OrdenarLlamadas();
             Console.WriteLine(c.Mostrar());
             Console.ReadKey();
 
