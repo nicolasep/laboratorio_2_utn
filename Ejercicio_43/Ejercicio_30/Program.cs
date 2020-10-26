@@ -25,16 +25,25 @@ namespace Ejercicio_30
             bool n;
             
             Competencia competencia = new Competencia(10, 4, Competencia.TipoCompetencia.F1);
-            n = competencia + m1;
-            n = competencia + a1;
-            n = competencia + m4;
-            n = competencia + a3;
-            n = competencia + a4;
-            n = competencia + a5;
-            n = competencia + a2;
+            try
+            {
+                n = competencia + a1;
+                n = competencia + a3;
+                n = competencia + m1;
+                n = competencia + m4;
+                n = competencia + a4;
+                n = competencia + a5;
+                n = competencia + a2;
+            }
+            catch(CompetenciaNoDisponibleException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            
             Console.WriteLine("Competencia F1\n");
             Console.WriteLine(competencia.MostrarDatos());
             Console.WriteLine("-----------------------------------\n");
+            /*
             Competencia competencia2 = new Competencia(1055, 5, Competencia.TipoCompetencia.MotoCross);
             n = competencia2 + m1;
             n = competencia2 + a1;
@@ -44,7 +53,7 @@ namespace Ejercicio_30
             n = competencia2 + m5;
             n = competencia2 + a2;
             Console.WriteLine("Competencia Moto\n");
-            Console.WriteLine(competencia2.MostrarDatos());
+            Console.WriteLine(competencia2.MostrarDatos());*/
 
             Console.ReadKey();
         }

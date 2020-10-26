@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B0395C3-30D9-4774-9EB3-F18143FD1C72}</ProjectGuid>
+    <ProjectGuid>{6060CA02-8836-4AE8-82B5-FDEA38D3AB1B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_30</RootNamespace>
-    <AssemblyName>Ejercicio_30</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{297edc4a-ed19-458f-9744-07e4fe63442b}</Project>
-      <Name>Entidades</Name>
+    <ProjectReference Include="..\Ejercicio_42\Ejercicio_42.csproj">
+      <Project>{4df74c4c-5277-4a3d-9e0c-d76a7e03b28f}</Project>
+      <Name>Ejercicio_42</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B0395C3-30D9-4774-9EB3-F18143FD1C72}</ProjectGuid>
+    <ProjectGuid>{EBF115DC-9AC4-4DE3-BE25-237068D0989F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_30</RootNamespace>
-    <AssemblyName>Ejercicio_30</AssemblyName>
+    <RootNamespace>CentralTelefonica</RootNamespace>
+    <AssemblyName>CentralTelefonica</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{297edc4a-ed19-458f-9744-07e4fe63442b}</Project>
-      <Name>Entidades</Name>
+    <ProjectReference Include="..\CentralitaHerencia\CentralitaHerencia.csproj">
+      <Project>{16b43a09-a71d-429b-9c77-a080b95b9e47}</Project>
+      <Name>CentralitaHerencia</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

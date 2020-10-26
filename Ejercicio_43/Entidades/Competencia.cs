@@ -79,24 +79,31 @@ namespace Entidades
         }
         public static bool operator +(Competencia c, VehiculoDeCarrera a1)
         {
-           
-            if (c.competidores.Count < c.cantidadCompetidores && c == a1)
+           try
             {
-                foreach (VehiculoDeCarrera l in c.competidores)
+                if (c.competidores.Count < c.cantidadCompetidores && c == a1)
                 {
-                    if (l == a1)
+                    foreach (VehiculoDeCarrera l in c.competidores)
                     {
-                        return false;
+                        if (l == a1)
+                        {
+                            return false;
+                        }
                     }
-                }
-                a1.EnCompetencia = true;
-                a1.VueltasRestantes = c.cantidadVueltas;
-                Random random1 = new Random();
-                a1.CantidadCombustible = (short)random1.Next(15, 100);
-                c.competidores.Add(a1);
+                    a1.EnCompetencia = true;
+                    a1.VueltasRestantes = c.cantidadVueltas;
+                    Random random1 = new Random();
+                    a1.CantidadCombustible = (short)random1.Next(15, 100);
+                    c.competidores.Add(a1);
 
-                return true;
+                    return true;
+                }
             }
+            catch(CompetenciaNoDisponibleException ex)
+            {
+                throw new CompetenciaNoDisponibleException("Competencia incorrecta", "Competencia", "agregar a competencia", ex);
+            }
+            
             
 
             return false;
@@ -124,8 +131,9 @@ namespace Entidades
             {
                 return true;
             }
+            throw new CompetenciaNoDisponibleException("El vehiculo no corresponde a la competencia ", "competencia", "sobrecarga igual");
 
-            return false;
+            //return false;
         }
         public static bool operator !=(Competencia c, VehiculoDeCarrera a1)
         {
