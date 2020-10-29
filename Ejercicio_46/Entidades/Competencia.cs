@@ -89,7 +89,7 @@ namespace Entidades
         {
            try
             {
-                if (c.competidores.Count < c.cantidadCompetidores && c == a1)
+                if (c.competidores.Count < c.cantidadCompetidores && c != a1)
                 {
                     
                     a1.EnCompetencia = true;
@@ -125,6 +125,7 @@ namespace Entidades
         }
         public static bool operator ==(Competencia c, VehiculoDeCarrera a1)
         {
+            
             if((c.tipo == TipoCompetencia.F1 && a1 is AutoF1)||
                 (c.tipo == TipoCompetencia.MotoCross && a1 is MotoCross))
             {
@@ -137,29 +138,7 @@ namespace Entidades
                 }
                 return false;
             }
-           /*
-            if(c.tipo == TipoCompetencia.F1 && a1 is AutoF1)
-            {
-                foreach(VehiculoDeCarrera l in c.competidores)
-                {
-                    if((AutoF1)l == a1)
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            else if(c.tipo == TipoCompetencia.MotoCross && a1 is MotoCross)
-            {
-                foreach (VehiculoDeCarrera l in c.competidores)
-                {
-                    if (l == a1)
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }*/
+            
             throw new CompetenciaNoDisponibleException("El vehiculo no corresponde a la competencia ", "competencia", "sobrecarga igual");
 
         }
